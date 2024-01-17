@@ -11,13 +11,40 @@ struct Perfil: View {
     @State public var correo:String = ""
     @State public var telefono: String = ""
     @State private var navigationActive: Bool = false
+    @State private var imagenPerfil: UIImage?
+    @State private var mostrarImagePicker: Bool = false
     
     var body: some View {
         VStack {
             ZStack {
                 Circle().frame(width: 80, height: 80).foregroundColor(Color("azulClaro"))
-                Image(systemName: "person.fill").resizable().frame(width: 50, height: 50).foregroundColor(.white)
+
+                if let imagen = imagenPerfil {
+                    Image(uiImage: imagen)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 120, height: 120)
+                        .clipShape(Circle())
+                } else {
+                    Image(systemName: "person.circle")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 120, height: 120)
+                        .clipShape(Circle())
+                        .foregroundColor(.white)
+                    
+                }
+
+
             }.padding(.top,36)
+            
+            Button("Seleccionar Foto") {
+                mostrarImagePicker.toggle()
+            }
+            .padding().foregroundColor(.black).fontWeight(.semibold)
+            .sheet(isPresented: $mostrarImagePicker, onDismiss: guardarImagen) {
+                ImagePicker(imagenSeleccionada: $imagenPerfil)
+            }
             
             if let nombre = UserDefaults.standard.string(forKey: "userName"){
                 Text("Bienvenido \(nombre)").padding(.top, 60).padding(.bottom)
@@ -42,6 +69,7 @@ struct Perfil: View {
                 UserDefaults.standard.removeObject(forKey: "userName")
                 UserDefaults.standard.removeObject(forKey: "userMail")
                 UserDefaults.standard.removeObject(forKey: "userPhone")
+                UserDefaults.standard.removeObject(forKey: "imagenPerfil")
                 navigationActive = true
 
             } label: {
@@ -62,6 +90,20 @@ struct Perfil: View {
             Spacer()
             
 
+        }
+    }
+    
+    private func cargarImagenGuardada() {
+        if let imageData = UserDefaults.standard.data(forKey: "imagenPerfil"),
+           let uiImage = UIImage(data: imageData) {
+            imagenPerfil = uiImage
+        }
+    }
+
+    private func guardarImagen() {
+        if let imagen = imagenPerfil,
+           let imageData = imagen.pngData() {
+            UserDefaults.standard.set(imageData, forKey: "imagenPerfil")
         }
     }
 }
