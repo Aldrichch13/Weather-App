@@ -11,7 +11,11 @@ import SwiftUI
 struct Weather_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if UserDefaults.standard.string(forKey: "userName") == nil {
+                ContentView()
+            } else {
+                Principal()
+            }
         }
     }
 }

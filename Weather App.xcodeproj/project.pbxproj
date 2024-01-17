@@ -11,6 +11,13 @@
 		A0A7F71A2B56EBA50023CD70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F7192B56EBA50023CD70 /* ContentView.swift */; };
 		A0A7F71C2B56EBA60023CD70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A7F71B2B56EBA60023CD70 /* Assets.xcassets */; };
 		A0A7F71F2B56EBA60023CD70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A7F71E2B56EBA60023CD70 /* Preview Assets.xcassets */; };
+		A0A7F7262B56F7020023CD70 /* Principal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F7252B56F7020023CD70 /* Principal.swift */; };
+		A0A7F7282B5702570023CD70 /* Clima.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F7272B5702570023CD70 /* Clima.swift */; };
+		A0A7F72A2B5702690023CD70 /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F7292B5702690023CD70 /* Perfil.swift */; };
+		A0A7F72D2B571B0B0023CD70 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F72C2B571B0B0023CD70 /* APIRequest.swift */; };
+		A0A7F72F2B571E0B0023CD70 /* ModeloDatos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F72E2B571E0B0023CD70 /* ModeloDatos.swift */; };
+		A0A7F73E2B5795930023CD70 /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = A0A7F73D2B5795930023CD70 /* SwiftUIRefresh */; };
+		A0A7F7402B5795B30023CD70 /* Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F73F2B5795B30023CD70 /* Scroll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,12 @@
 		A0A7F7192B56EBA50023CD70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0A7F71B2B56EBA60023CD70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0A7F71E2B56EBA60023CD70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0A7F7252B56F7020023CD70 /* Principal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Principal.swift; sourceTree = "<group>"; };
+		A0A7F7272B5702570023CD70 /* Clima.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clima.swift; sourceTree = "<group>"; };
+		A0A7F7292B5702690023CD70 /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
+		A0A7F72C2B571B0B0023CD70 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		A0A7F72E2B571E0B0023CD70 /* ModeloDatos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloDatos.swift; sourceTree = "<group>"; };
+		A0A7F73F2B5795B30023CD70 /* Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A7F73E2B5795930023CD70 /* SwiftUIRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				A0A7F7172B56EBA50023CD70 /* Weather_AppApp.swift */,
-				A0A7F7192B56EBA50023CD70 /* ContentView.swift */,
+				A0A7F7372B5729D20023CD70 /* Views */,
+				A0A7F7362B5729C30023CD70 /* ViewModel */,
+				A0A7F72B2B571AED0023CD70 /* Model */,
 				A0A7F71B2B56EBA60023CD70 /* Assets.xcassets */,
 				A0A7F71D2B56EBA60023CD70 /* Preview Content */,
 			);
@@ -65,6 +81,34 @@
 				A0A7F71E2B56EBA60023CD70 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A0A7F72B2B571AED0023CD70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0A7F72E2B571E0B0023CD70 /* ModeloDatos.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A0A7F7362B5729C30023CD70 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A0A7F72C2B571B0B0023CD70 /* APIRequest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A0A7F7372B5729D20023CD70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A0A7F7192B56EBA50023CD70 /* ContentView.swift */,
+				A0A7F7252B56F7020023CD70 /* Principal.swift */,
+				A0A7F73F2B5795B30023CD70 /* Scroll.swift */,
+				A0A7F7292B5702690023CD70 /* Perfil.swift */,
+				A0A7F7272B5702570023CD70 /* Clima.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +127,9 @@
 			dependencies = (
 			);
 			name = "Weather App";
+			packageProductDependencies = (
+				A0A7F73D2B5795930023CD70 /* SwiftUIRefresh */,
+			);
 			productName = "Weather App";
 			productReference = A0A7F7142B56EBA50023CD70 /* Weather App.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +158,9 @@
 				Base,
 			);
 			mainGroup = A0A7F70B2B56EBA50023CD70;
+			packageReferences = (
+				A0A7F73C2B5795930023CD70 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
+			);
 			productRefGroup = A0A7F7152B56EBA50023CD70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +187,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A7F72A2B5702690023CD70 /* Perfil.swift in Sources */,
+				A0A7F7282B5702570023CD70 /* Clima.swift in Sources */,
 				A0A7F71A2B56EBA50023CD70 /* ContentView.swift in Sources */,
+				A0A7F7262B56F7020023CD70 /* Principal.swift in Sources */,
+				A0A7F72F2B571E0B0023CD70 /* ModeloDatos.swift in Sources */,
+				A0A7F72D2B571B0B0023CD70 /* APIRequest.swift in Sources */,
+				A0A7F7402B5795B30023CD70 /* Scroll.swift in Sources */,
 				A0A7F7182B56EBA50023CD70 /* Weather_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +326,7 @@
 				DEVELOPMENT_TEAM = D3N4CWF59S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Weather App necesita tu ubicacion para mostrarte con precision el clima donde te encuntres";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +356,7 @@
 				DEVELOPMENT_TEAM = D3N4CWF59S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Weather App necesita tu ubicacion para mostrarte con precision el clima donde te encuntres";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +397,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A0A7F73C2B5795930023CD70 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/timbersoftware/SwiftUIRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A0A7F73D2B5795930023CD70 /* SwiftUIRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0A7F73C2B5795930023CD70 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
+			productName = SwiftUIRefresh;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A0A7F70C2B56EBA50023CD70 /* Project object */;
 }
