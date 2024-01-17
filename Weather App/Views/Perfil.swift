@@ -13,6 +13,9 @@ struct Perfil: View {
     @State private var navigationActive: Bool = false
     @State private var imagenPerfil: UIImage?
     @State private var mostrarImagePicker: Bool = false
+    @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    
+
     
     var body: some View {
         VStack {
@@ -38,24 +41,35 @@ struct Perfil: View {
 
             }.padding(.top,36)
             
-            Button("Seleccionar Foto") {
-                mostrarImagePicker.toggle()
-            }
-            .padding().foregroundColor(.black).fontWeight(.semibold)
-            .sheet(isPresented: $mostrarImagePicker, onDismiss: guardarImagen) {
-                ImagePicker(imagenSeleccionada: $imagenPerfil)
-            }
+            HStack {
+                Button("Seleccionar Foto") {
+                    sourceType = .photoLibrary
+                    mostrarImagePicker.toggle()
+                }.padding()
+                
+                Button("Tomar Foto") {
+                    sourceType = .camera
+                    mostrarImagePicker.toggle()
+                    }.padding()
+
+                .sheet(isPresented: $mostrarImagePicker, onDismiss: guardarImagen) {
+                    ImagePicker(imagenSeleccionada: $imagenPerfil, sourceType: sourceType)
+                    }
+                
+                }
             
             if let nombre = UserDefaults.standard.string(forKey: "userName"){
                 Text("Bienvenido \(nombre)").padding(.top, 60).padding(.bottom)
             }
-            TextField("Correo", text: $correo).overlay(Rectangle().frame(height: 1).padding(.top, 35)).padding(.horizontal).multilineTextAlignment(.center).padding()
-            TextField("Telefono", text: $telefono).overlay(Rectangle().frame(height: 1).padding(.top, 35)).padding(.horizontal).multilineTextAlignment(.center).padding(.bottom,60).padding()
+            TextField("Correo", text: $correo).keyboardType(.emailAddress).overlay(Rectangle().frame(height: 1).padding(.top, 35)).padding(.horizontal).multilineTextAlignment(.center).padding()
+            TextField("Telefono", text: $telefono).keyboardType(.numberPad).overlay(Rectangle().frame(height: 1).padding(.top, 35)).padding(.horizontal).multilineTextAlignment(.center).padding(.bottom,60).padding()
             
             
             Button {
                 UserDefaults.standard.set(correo, forKey: "userMail")
                 UserDefaults.standard.set(telefono, forKey: "userPhone")
+                correo = ""
+                telefono = ""
                 
             } label: {
                 ZStack {
