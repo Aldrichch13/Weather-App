@@ -17,7 +17,6 @@
 		A0A7F72D2B571B0B0023CD70 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F72C2B571B0B0023CD70 /* APIRequest.swift */; };
 		A0A7F72F2B571E0B0023CD70 /* ModeloDatos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F72E2B571E0B0023CD70 /* ModeloDatos.swift */; };
 		A0A7F73E2B5795930023CD70 /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = A0A7F73D2B5795930023CD70 /* SwiftUIRefresh */; };
-		A0A7F7402B5795B30023CD70 /* Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F73F2B5795B30023CD70 /* Scroll.swift */; };
 		A0A7F7422B579FCE0023CD70 /* SeleccionImagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7F7412B579FCE0023CD70 /* SeleccionImagen.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +31,6 @@
 		A0A7F7292B5702690023CD70 /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
 		A0A7F72C2B571B0B0023CD70 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		A0A7F72E2B571E0B0023CD70 /* ModeloDatos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloDatos.swift; sourceTree = "<group>"; };
-		A0A7F73F2B5795B30023CD70 /* Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scroll.swift; sourceTree = "<group>"; };
 		A0A7F7412B579FCE0023CD70 /* SeleccionImagen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionImagen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +105,6 @@
 			children = (
 				A0A7F7192B56EBA50023CD70 /* ContentView.swift */,
 				A0A7F7252B56F7020023CD70 /* Principal.swift */,
-				A0A7F73F2B5795B30023CD70 /* Scroll.swift */,
 				A0A7F7292B5702690023CD70 /* Perfil.swift */,
 				A0A7F7272B5702570023CD70 /* Clima.swift */,
 			);
@@ -197,7 +194,6 @@
 				A0A7F7262B56F7020023CD70 /* Principal.swift in Sources */,
 				A0A7F72F2B571E0B0023CD70 /* ModeloDatos.swift in Sources */,
 				A0A7F72D2B571B0B0023CD70 /* APIRequest.swift in Sources */,
-				A0A7F7402B5795B30023CD70 /* Scroll.swift in Sources */,
 				A0A7F7182B56EBA50023CD70 /* Weather_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
